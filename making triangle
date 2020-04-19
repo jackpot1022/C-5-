@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+    int kugi = 0, jul = kugi;
+    printf("삼각형 크기를 입력하세요 : ");
+    scanf("%d", &kugi);
+
+    for (jul = 1 ; jul <= kugi ; ++jul)
+    {
+        for (int gongbak = kugi - jul ; gongbak > 0; --gongbak)
+        {
+            printf(" ");
+        }
+        for(int star = (2 * jul - 1) ; star > 0 ; star--)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
