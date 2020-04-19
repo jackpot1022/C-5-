@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main()
+{
+    int first1day = 0, lastday = 0, week = 1, a = 7, nal = 1;
+
+    printf("일(0),월(1),화(2),수(3),목(4),금(5),토(6) 중에서\n");
+    printf("이번달 1일은 무슨요일인가요 : ");
+    scanf("%d", &first1day);
+
+    printf("이번달 말일은 언제인가요 : ");
+    scanf("%d", &lastday);
+
+    //첫째 줄 코드
+    for (int day = 0 ; first1day > day; ++day)
+    {
+        printf("     ");
+        
+    }
+    while (a-first1day > 0)
+    {
+        printf("%5d", nal);
+        ++nal;
+        ++first1day;
+    }
+    week += nal;
+    //둘째줄 이하 코드
+    while (week <= lastday)
+    {
+        printf("\n");
+        int b = 7;
+        while ((b > 0) && (nal <= lastday))
+        {
+            printf("%5d", nal);
+            ++nal;
+            --b;
+        }
+        week += 6;
+    }
+    return 0;
+}
